@@ -6,7 +6,7 @@
         zmk,matrix_transform = &default_transform;
     };
 
-    default_transform: keymap_transform {
+    default_transform: matrix_transform {
         compatible = "zmk,matrix-transform";
         rows = <2>;
         columns = <2>;
@@ -22,13 +22,13 @@
         diode-direction = "col2row";
 
         row-gpios = <
-            &gpio 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)
-            &gpio 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)
+            &pro_micro  1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)
+            &pro_micro  0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)
         >;
 
         col-gpios = <
-            &gpio 5 GPIO_ACTIVE_HIGH
-            &gpio 6 GPIO_ACTIVE_HIGH
+            &pro_micro  5 GPIO_ACTIVE_HIGH
+            &pro_micro  6 GPIO_ACTIVE_HIGH
         >;
     };
 };
