@@ -2,6 +2,12 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    led_on: led_on {
+        compatible = "zmk,behavior-led-on";
+        label = "LED On";
+        led-index = <0>;
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -47,11 +53,5 @@
                 tap-dance-actions = <&led_on>;
             };
         };
-    };
-
-    led_on: led_on {
-        compatible = "zmk,behavior-led-on";
-        label = "LED On";
-        led-index = <0>;
     };
 };
