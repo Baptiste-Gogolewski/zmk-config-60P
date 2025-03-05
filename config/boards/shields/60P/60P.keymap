@@ -24,7 +24,7 @@
                 compatible = "zmk,behavior-tap-dance";
                 label = "B Pressed";
                 bindings = <&kp B>;
-                tap-dance-actions = <&signal_send>;
+                tap-dance-actions = <&led_on>;
             };
 
             c_pressed: c_pressed {
@@ -38,8 +38,14 @@
                 compatible = "zmk,behavior-tap-dance";
                 label = "D Pressed";
                 bindings = <&kp D>;
-                tap-dance-actions = <&signal_send>;
+                tap-dance-actions = <&led_on>;
             };
         };
+    };
+
+    led_on: led_on {
+        compatible = "zmk,behavior-led-on";
+        label = "LED On";
+        led-index = <0>;
     };
 };
