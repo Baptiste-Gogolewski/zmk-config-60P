@@ -7,21 +7,12 @@
 
         default_layer {
             bindings = <
-                // Première ligne
                 &kp A &kp B
-                // Deuxième ligne
                 &kp C &kp D
             >;
         };
 
-        led_on: led_on {
-            compatible = "zmk,behavior-led-on";
-            label = "LED On";
-            led-index = <0>;
-        };
-
         behaviors {
-            // Allume la LED lorsque la touche A est pressée
             a_pressed: a_pressed {
                 compatible = "zmk,behavior-tap-dance";
                 label = "A Pressed";
@@ -29,7 +20,6 @@
                 tap-dance-actions = <&led_on>;
             };
 
-            // Allume la LED lorsque la touche B est pressée
             b_pressed: b_pressed {
                 compatible = "zmk,behavior-tap-dance";
                 label = "B Pressed";
@@ -37,7 +27,6 @@
                 tap-dance-actions = <&led_on>;
             };
 
-            // Allume la LED lorsque la touche C est pressée
             c_pressed: c_pressed {
                 compatible = "zmk,behavior-tap-dance";
                 label = "C Pressed";
@@ -45,7 +34,6 @@
                 tap-dance-actions = <&led_on>;
             };
 
-            // Allume la LED lorsque la touche D est pressée
             d_pressed: d_pressed {
                 compatible = "zmk,behavior-tap-dance";
                 label = "D Pressed";
@@ -53,5 +41,11 @@
                 tap-dance-actions = <&led_on>;
             };
         };
+    };
+
+    led_on: led_on {
+        compatible = "zmk,behavior-led-on";
+        label = "LED On";
+        led-index = <0>;
     };
 };
