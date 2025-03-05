@@ -11,41 +11,5 @@
                 &kp C &kp D
             >;
         };
-
-        behaviors {
-            a_pressed: a_pressed {
-                compatible = "zmk,behavior-tap-dance";
-                label = "A Pressed";
-                bindings = <&kp A>;
-                tap-dance-actions = <&led_on>;
-            };
-
-            b_pressed: b_pressed {
-                compatible = "zmk,behavior-tap-dance";
-                label = "B Pressed";
-                bindings = <&kp B>;
-                tap-dance-actions = <&led_on>;
-            };
-
-            c_pressed: c_pressed {
-                compatible = "zmk,behavior-tap-dance";
-                label = "C Pressed";
-                bindings = <&kp C>;
-                tap-dance-actions = <&led_on>;
-            };
-
-            d_pressed: d_pressed {
-                compatible = "zmk,behavior-tap-dance";
-                label = "D Pressed";
-                bindings = <&kp D>;
-                tap-dance-actions = <&led_on>;
-            };
-        };
-    };
-
-    led_on: led_on {
-        compatible = "zmk,behavior-led-on";
-        label = "LED On";
-        led-index = <0>;
     };
 };

@@ -31,12 +31,4 @@
             &gpio0 6 GPIO_ACTIVE_HIGH
         >;
     };
-
-    leds {
-        compatible = "gpio-leds";
-        led0 {
-            label = "LED";
-            gpios = <&gpio0 25 GPIO_ACTIVE_HIGH>;  // Remplacez 25 par le numéro de broche correct pour la LED intégrée
-        };
-    };
 };
